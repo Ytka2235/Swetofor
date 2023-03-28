@@ -1,14 +1,16 @@
 package com.example.swetofor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
- View view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,18 +20,20 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceAsColor")
     public void GreenButton(View view)
     {
-        this.view.setBackgroundColor(R.color.green);
+        ConstraintLayout main =  findViewById(R.id.main_activity);
+        main.setBackgroundColor(getColor(R.color.green));
     }
     @SuppressLint("ResourceAsColor")
     public void YellowButton(View view)
     {
-        this.view.setBackgroundColor(R.color.yellow);
+        ConstraintLayout main =  findViewById(R.id.main_activity);
+        main.setBackgroundColor(getColor(R.color.yellow));
     }
     @SuppressLint("ResourceAsColor")
     public void RedButton(View view)
     {
-        this.view.setBackgroundColor(R.color.red);
-
+        ConstraintLayout main =  findViewById(R.id.main_activity);
+        main.setBackgroundColor(getColor(R.color.red));
     }
 
 }
